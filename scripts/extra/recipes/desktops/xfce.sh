@@ -1,0 +1,1 @@
+RECIPE_PKGS="accountsservice aisleriot blueman catfish dconf-editor fastfetch galculator geany geany-plugins gnome-firmware gnumeric guvcview meld mpv vlc papirus-icon-theme pavucontrol polkit-gnome smplayer transmission-gtk xarchiver xdg-desktop-portal xdg-desktop-portal-gtk xfburn xfce4 xfce4-goodies xpdf lightdm light-locker lightdm-gtk-greeter lightdm-gtk-greeter-settings"
