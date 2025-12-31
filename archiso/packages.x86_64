@@ -21,6 +21,10 @@ dmidecode
 dmraid
 dnsmasq
 dosfstools
+cargo
+gnome-shell
+npm
+electron31
 e2fsprogs
 edk2-shell
 efibootmgr
@@ -43,7 +47,7 @@ intel-ucode
 iw
 iwd
 jfsutils
-#kitty-terminfo
+kitty-terminfo
 ldns
 less
 #lftp
