@@ -15,7 +15,7 @@
 #LogFile     = /var/log/pacman.log
 #GPGDir      = /etc/pacman.d/gnupg/
 #HookDir     = /etc/pacman.d/hooks/
-HoldPkg     = pacman glibc
+HoldPkg      = pacman glibc
 #XferCommand = /usr/bin/curl -L -C - -f -o %o %u
 #XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u
 #CleanMethod = KeepInstalled
@@ -31,17 +31,18 @@ Architecture = auto
 # Misc options
 #UseSyslog
 Color
-ILoveCandy
 #NoProgressBar
 CheckSpace
-#VerbosePkgLists
+VerbosePkgLists
 ParallelDownloads = 12
 #DownloadUser = alpm
 #DisableSandbox
+ILoveCandy
+DisableDownloadTimeout
 
 # By default, pacman accepts packages signed by keys that its local keyring
 # trusts (see pacman-key and its man page), as well as unsigned packages.
-SigLevel    = Required DatabaseOptional
+SigLevel = Required DatabaseOptional
 LocalFileSigLevel = Optional
 #RemoteFileSigLevel = Required
 
@@ -71,13 +72,14 @@ LocalFileSigLevel = Optional
 # The testing repositories are disabled by default. To enable, uncomment the
 # repo name header and Include lines. You can add preferred servers immediately
 # after the header, and they will be used before the default mirrors.
-# my custom repo
-[arafsk_repo]
-SigLevel = Optional TrustAll
-Server = https://arafsk.github.io/arafsk_repo/$arch
 
 #[core-testing]
 #Include = /etc/pacman.d/mirrorlist
+
+# My Custom Repo
+[arafsk_repo]
+SigLevel = Never
+Server = https://arafsk.github.io/arafsk_repo/$arch
 
 [core]
 Include = /etc/pacman.d/mirrorlist
@@ -97,17 +99,12 @@ Include = /etc/pacman.d/mirrorlist
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 
-#[community]
-#Server = https://mirrors.kernel.org/archlinux/$repo/os/$arch
-#Include = /etc/pacman.d/mirrorlist
-
 # An example of a custom package repository.  See the pacman manpage for
 # tips on creating your own repositories.
-#[custom]
-#SigLevel = Optional TrustAll
-#Server = file:///home/munna/Desktop/BUILDER/arafsk/arafsk_repo/x86_64/
 
-#Chaotic-AUR
+# If you want the local personal_repo you need to make it available (remove hashtags)
+# and you need to change the path to the packages - line 3
+# https://www.youtube.com/watch?v=TqFuLknCsUE
+
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
-

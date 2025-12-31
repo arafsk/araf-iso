@@ -246,7 +246,6 @@ poppler-qt5
 #########################################################################
 
 ###applications
-chromium
 dmenu
 firefox
 galculator
@@ -340,22 +339,15 @@ bibata-cursor-theme
 sardi-icons
 surfn-icons-git
 
-###tools
-mkinitcpio-openswap
-
 ###utilities
-alacritty
 appstream
 archlinux-tools
 downgrade
-fastfetch-git
+fastfetch
 font-manager
 gittyup
-#
 inxi
 mintstick
-chaotic-neofetch-git
-paru-git
 python-pyparted
 python-pywal
 rate-mirrors
@@ -364,22 +356,6 @@ the_silver_searcher
 yad
 yay
 
-###########################################################################
-####                               CALAMARES
-###########################################################################
-
-calamares
-araf-calamares-config
-boost
-cmake
-extra-cmake-modules
-ninja
-python-jsonschema
-python-pyaml
-qt6-tools
-adobe-source-han-sans-jp-fonts
-adobe-source-han-sans-kr-fonts
-adobe-source-han-sans-cn-fonts
 
 ###########################################################################
 ####                           DISPLAY MANAGERS
@@ -398,7 +374,24 @@ xfce4-goodies
 ###########################################################################
 ####                       APPS
 ###########################################################################
-
+kitty
+alacritty
+autorandr
+dash
+dmenu
+feh
+gcc
+lolcat
+make
+picom-git
+polkit-gnome
+rofi
+sxhkd
+ttf-font-awesome
+ttf-jetbrains-mono-nerd
+ttf-meslo-nerd-font-powerlevel10k
+volumeicon
+xorg-xsetroot
 btop
 devtools
 fd
@@ -430,54 +423,33 @@ yad
 ###########################################################################
 
 #flat-remix
-#colloid-cursors-git
 chaotic-keyring
 chaotic-mirrorlist
+colloid-cursors-git
 
 ###########################################################################
-####                               NEMESIS REPO
+####                               CALAMARES
 ###########################################################################
 
-#
-#
-#
-#
-#
-#
-rofi
+araf-calamares
+araf-calamares-debug
+araf-calamares-config
+mkinitcpio-openswap
+boost
+cmake
+extra-cmake-modules
+qt5-tools
+qt5-translations
+polkit-qt5
+ckbcomp
 
-#
-#
-#
-#
-#
-#
-speedtest-cli
-#
-xcolor
-
-###########################################################################
-####                               NEMESIS REPO CHADWM
-###########################################################################
-kitty
-alacritty
-autorandr
-dash
-dmenu
-feh
-gcc
-lolcat
-make
-picom-git
-polkit-gnome
-rofi
-sxhkd
-ttf-font-awesome
-ttf-jetbrains-mono-nerd
-ttf-meslo-nerd-font-powerlevel10k
-volumeicon
-xorg-xsetroot
-
+ninja
+python-jsonschema
+python-pyaml
+qt6-tools
+adobe-source-han-sans-jp-fonts
+adobe-source-han-sans-kr-fonts
+adobe-source-han-sans-cn-fonts
 ananicy-cpp
 cachyos-ananicy-rules-git
 

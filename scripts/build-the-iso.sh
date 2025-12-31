@@ -80,7 +80,7 @@ echo
 echo "You can add a personal local repo to the iso build if you want"
 echo "https://www.youtube.com/watch?v=TqFuLknCsUE"
 echo
-echo "You can learn to create your own iso on the basis of Kiro"
+echo "You can learn to create your own iso on the basis of araf"
 echo "That project is called Buildra"
 echo "https://youtu.be/3jdKH6bLgUE"
 echo "https://youtu.be/mH52To8DvlI"
@@ -125,14 +125,14 @@ echo
 
 	desktop="xfce"
 
-	kiroVersion='v25.12.29.01'
+	arafVersion='v25.12.29.01'
 
-	isoLabel='kiro-'$kiroVersion'-x86_64.iso'
+	isoLabel='araf-'$arafVersion'-x86_64.iso'
 
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 84-1"
-	buildFolder=$HOME"/kiro-build"
-	outFolder=$HOME"/kiro-Out"
+	buildFolder=$HOME"/araf-build"
+	outFolder=$HOME"/araf-Out"
 
 	# If you want to add packages from the chaotics-aur repo then
 	# change the variable to true and add the package names
@@ -250,7 +250,7 @@ echo
 	tput sgr0
 	echo "################################################################## "
 	echo "Building the desktop                   : "$desktop
-	echo "Building version                       : "$kiroVersion
+	echo "Building version                       : "$arafVersion
 	echo "Iso label                              : "$isoLabel
 	echo "Build folder                           : "$buildFolder
 	echo "Out folder                             : "$outFolder
