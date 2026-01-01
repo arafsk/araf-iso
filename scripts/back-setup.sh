@@ -11,21 +11,14 @@
 # ----------------------------------------
 
 MYUSERNM="liveuser"
-# use all lowercase letters only
-
 MYUSRPASSWD="1122"
-# Pick a password of your choice
-
 RTPASSWD="1122"
-# Pick a root password
-
 MYHOSTNM="Araf_OS"
-# Pick a hostname for the machine
 HOME="/home/munna"
-BUILD_DIR=$HOME"/DATA/iso-build"
-OUT_DIR=$HOME"/DATA/iso-out"
+BUILD_DIR=$HOME"/DATA/work"
+OUT_DIR=$HOME"/DATA/out"
 RELENG_DIR=$HOME"/DATA/releng"
-ARCHISO_DIR=$HOME"/Desktop/athena/archiso"
+ARCHISO_DIR=$HOME"/DATA/athena/iso"
 
 # ==========================================
 # COLOR CODES
@@ -102,6 +95,15 @@ prepreqs () {
     fi
 }
 
+cleanup () {
+    for file in "${files_to_remove[@]}"; do
+        [[ -f "$file" ]] && rm -f "$file"
+    done
+    
+    rm -rf  "$BUILD_DIR" "OUT_DIR" "$RELENG_DIR" 2>/dev/null || true
+    
+}
+    
 # Copy releng to working directory
 cpreleng () {
     cp -r /usr/share/archiso/configs/releng "$RELENG_DIR"
@@ -133,6 +135,7 @@ cpmyfiles () {
     cp -v "$ARCHISO_DIR/pacman.conf" "$RELENG_DIR/"
     cp -v "$ARCHISO_DIR/profiledef.sh" "$RELENG_DIR/"
     cp -v "$ARCHISO_DIR/packages.x86_64" "$RELENG_DIR/"
+    mv "$RELENG_DIR/bootstrap_packages" "$RELENG_DIR/bootstrap_packages.x86_64"
     
     # Copy boot configuration
     cp -rv "$ARCHISO_DIR/grub/" "$RELENG_DIR/"
@@ -258,7 +261,7 @@ setup_systemd_services() {
         "cups.service:printer.target.wants"
         "cups.socket:sockets.target.wants"
         "cups.path:multi-user.target.wants"
-        "lightdm.service:display-manager.service"
+        "sddm.service:display-manager.service"
     )
     
     for service_link in "${services[@]}"; do
@@ -271,6 +274,7 @@ setup_systemd_services() {
 
 build_iso() {
     echo "Start Building ISO image..."
+    mkdir -p "$BUILD_DIR" "$OUT_DIR"
     mkarchiso -v -w "$BUILD_DIR" -o "$OUT_DIR" "$RELENG_DIR"
     
     # Check if build was successful
@@ -387,6 +391,7 @@ rmezrepo () {
 rootuser
 handlerror
 prepreqs
+cleanup
 cpreleng
 cpezrepo
 cpmyfiles
@@ -396,9 +401,6 @@ build_iso
 verify_iso
 sign_iso
 rmezrepo
-#runmkarchiso
-#cppkglist
-#rmezrepo
 #
 # END
 #

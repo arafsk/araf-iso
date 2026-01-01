@@ -1,4 +1,3 @@
-alsa-utils
 amd-ucode
 arch-install-scripts
 #archinstall
@@ -177,7 +176,6 @@ virtualbox-guest-utils
 
 ###packages for dual boot
 os-prober
-
 ###audio
 alsa-firmware
 alsa-plugins
@@ -227,15 +225,6 @@ udiskie
 udisks2
 xdg-user-dirs
 
-###printers
-cups
-cups-filters
-cups-pdf
-ghostscript
-gsfonts
-gutenprint
-system-config-printer
-
 ###tumbler
 tumbler
 ffmpegthumbnailer
@@ -268,7 +257,12 @@ vlc-plugins-all
 
 lm_sensors
 
-###fonts
+#######################################################
+###                      FONTS                      ###
+#######################################################
+noto-fonts-emoji
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
 adobe-source-sans-fonts
 noto-fonts
 ttf-dejavu
@@ -278,9 +272,26 @@ ttf-roboto
 ttf-roboto-mono
 ttf-ubuntu-font-family
 
+#######################################################
+###                    UTILITIES                    ###
+#######################################################
 ###themes
 
 kvantum-qt5
+bat
+#espeakup
+fastfetch
+git
+lsd
+openbsd-netcat
+#orca
+paru
+polkit
+ufw
+wget
+which
+xclip
+zoxide
 
 ###utilities
 arandr
@@ -332,17 +343,6 @@ zsh
 zsh-completions
 zsh-syntax-highlighting
 
-###########################################################################
-#                           REPOS
-###########################################################################
-
-###cursors
-bibata-cursor-theme
-
-###icons
-sardi-icons
-surfn-icons-git
-
 ###utilities
 appstream
 archlinux-tools
@@ -360,7 +360,6 @@ the_silver_searcher
 yad
 yay
 
-
 ###########################################################################
 ####                           DISPLAY MANAGERS
 ###########################################################################
@@ -368,13 +367,14 @@ yay
 accountsservice
 sddm
 
-###########################################################################
-####                           DESKTOP MANAGERS
-###########################################################################
-
 xfce4
 xfce4-goodies
+###########################################################################
+#                           REPOS
+###########################################################################
 
+###cursors
+bibata-cursor-theme
 ###########################################################################
 ####                       APPS
 ###########################################################################
@@ -418,6 +418,12 @@ ttf-font-awesome
 ttf-jetbrains-mono-nerd
 variety
 vimix-cursors
+#######################################################
+###                   BLACKARCH                     ###
+#######################################################
+
+#blackarch-keyring
+#blackarch-mirrorlist
 
 ###########################################################################
 ####                               CHAOTICS AUR
@@ -427,13 +433,21 @@ vimix-cursors
 chaotic-keyring
 chaotic-mirrorlist
 colloid-cursors-git
+#######################################################
+###                ATHENA REPOSITORY                ###
+#######################################################
+
+
+#athena-keyring
+#athena-mirrorlist
+
 
 ###########################################################################
 ####                               CALAMARES
 ###########################################################################
 
-araf-calamares
-araf-calamares-debug
+calamares
+calamares-debug
 araf-calamares-config
 mkinitcpio-openswap
 boost
@@ -459,6 +473,4 @@ cachyos-ananicy-rules-git
 ###########################################################################
 
 araf-dots
-arc-gtk-theme
-araf-arc-dawn-git
 araf-xfce-base
