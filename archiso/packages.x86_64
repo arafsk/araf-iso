@@ -165,8 +165,8 @@ mesa
 
 ###hardware video support
 nvidia-open-dkms
-nvidia-utils
-nvidia-settings
+#nvidia-utils
+#nvidia-settings
 #mesa-utils
 
 ###base-devel
@@ -391,8 +391,6 @@ picom-git
 polkit-gnome
 rofi
 sxhkd
-ttf-font-awesome
-ttf-jetbrains-mono-nerd
 ttf-meslo-nerd-font-powerlevel10k
 volumeicon
 xorg-xsetroot
@@ -420,7 +418,6 @@ ttf-font-awesome
 ttf-jetbrains-mono-nerd
 variety
 vimix-cursors
-yad
 
 ###########################################################################
 ####                               CHAOTICS AUR
@@ -461,7 +458,7 @@ cachyos-ananicy-rules-git
 ####                           PERSONAL_REPO aka LOCAL REPO
 ###########################################################################
 
-araf-dots-git
+araf-dots
 arc-gtk-theme
 araf-arc-dawn-git
-araf-xfce-git
+araf-xfce-base
