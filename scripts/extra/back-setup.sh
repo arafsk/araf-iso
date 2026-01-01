@@ -4,7 +4,7 @@
 # Define Variables
 # ----------------------------------------
 
-MYUSERNM="Araf"
+MYUSERNM="liveuser"
 # use all lowercase letters only
 
 MYUSRPASSWD="1122"
@@ -13,12 +13,12 @@ MYUSRPASSWD="1122"
 RTPASSWD="1122"
 # Pick a root password
 
-MYHOSTNM="sk"
+MYHOSTNM="Araf_OS"
 # Pick a hostname for the machine
 
-WORKDIR="/home/arafsk/DATA/iso-make"
+WORKDIR="/home/munna/DATA/iso-build"
 
-OUTDIR="/home/arafsk/DATA/iso-make/out"
+OUTDIR="/home/munna/DATA/iso-out"
 
 # ----------------------------------------
 # Functions
@@ -66,14 +66,14 @@ rm -r ./releng/airootfs/etc/mkinitcpio.conf.d
 }
 
 # Copy ezrepo to opt
-cpezrepo () {
-cp -r ./airootfs/opt/arafsk_repo/ /opt/
+#cpezrepo () {
+#cp -r ./airootfs/opt/arafsk_repo/ /opt/
 }
 
 # Remove ezrepo from opt
-rmezrepo () {
-rm -r /opt/arafsk_repo
-}
+#rmezrepo () {
+#rm -r /opt/arafsk_repo
+#}
 
 # Remove auto-login, cloud-init, hyper-v, iwd, sshd, & vmware services
 rmunitsd () {
@@ -117,7 +117,7 @@ cp -r grub/ ./releng/
 cp -r efiboot/ ./releng/
 cp -r syslinux/ ./releng/
 cp -r airootfs/etc/ ./releng/airootfs/
-cp -r airootfs/opt/ ./releng/airootfs/
+#cp -r airootfs/opt/ ./releng/airootfs/
 cp -r airootfs/usr/ ./releng/airootfs/
 cp -r airootfs/root/ ./releng/airootfs/
 }
@@ -186,18 +186,18 @@ sambashare:!*::"${MYUSERNM}"
 "${MYUSERNM}":!*::" > ./releng/airootfs/etc/gshadow
 }
 
-# Start mkarchiso
-runmkarchiso () {
-    echo "[*]" "Starting ISO build process..."
-    mkdir -p "${WORKDIR}"
-    mkdir -p "${OUTDIR}"
-    mkarchiso -v -w "${WORKDIR}/build" -o "${OUTDIR}" ./releng
-}
+## Start mkarchiso
+#runmkarchiso () {
+    #echo "[*]" "Starting ISO build process..."
+    #mkdir -p "${WORKDIR}"
+    #mkdir -p "${OUTDIR}"
+    #mkarchiso -v -w "${WORKDIR}/build" -o "${OUTDIR}" ./releng
+#}
 
-cppkglist() {
-echo "✓ Package list copied"
-cp "${WORKDIR}/build/iso/arch/pkglist.x86_64.txt" "${OUTDIR}/"
-}
+#cppkglist() {
+#echo "✓ Package list copied"
+#cp "${WORKDIR}/build/iso/arch/pkglist.x86_64.txt" "${OUTDIR}/"
+#}
 
 # ----------------------------------------
 # Run Functions
@@ -209,7 +209,7 @@ prepreqs
 cleanup
 cpreleng
 addnmlinks
-cpezrepo
+#cpezrepo
 rmunitsd
 cpmyfiles
 sethostname
@@ -217,9 +217,9 @@ crtpasswd
 crtgroup
 crtshadow
 crtgshadow
-runmkarchiso
-cppkglist
-rmezrepo
+#runmkarchiso
+#cppkglist
+#rmezrepo
 #
 # END
 #

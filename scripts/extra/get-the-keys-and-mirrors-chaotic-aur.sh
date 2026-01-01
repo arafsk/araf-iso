@@ -48,7 +48,7 @@ rm -f chaotic-keyring.pkg.tar.zst chaotic-mirrorlist.pkg.tar.zst
 echo -e "${GREEN}Chaotic-AUR keyring and mirrorlist installed successfully.${NC}"
 
 # Configure pacman.conf
-backup_file="/etc/pacman.conf.kiro"
+backup_file="/etc/pacman.conf.araf"
 new_conf="pacman.conf"
 target="/etc/pacman.conf"
 
