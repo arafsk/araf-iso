@@ -140,17 +140,11 @@ ntp
 upd72020x-fw
 wd719x-firmware
 wget
-sassc
-optipng
-inkscape
-gtk-engines
-gtk-engine-murrine
 
 ###xorg
 xorg-server
 xorg-apps
 xorg-xinit
-xarchiver
 
 ###video
 xf86-input-elographics
@@ -166,17 +160,13 @@ xf86-input-libinput
 #xf86-video-openchrome
 #xf86-video-vesa
 #xf86-video-vmware
-
+mesa
 
 ###hardware video support
 nvidia-open-dkms
 nvidia-utils
 nvidia-settings
-lib32-nvidia-utils
-libva-nvidia-driver
-mesa
-#mesa-utils
-egl-wayland
+mesa-utils
 
 ###base-devel
 base-devel
@@ -234,11 +224,9 @@ mtpfs
 udiskie
 udisks2
 xdg-user-dirs
-r8168-dkms
 
 ###tumbler
 tumbler
-ffmpeg
 ffmpegthumbnailer
 freetype2
 libgsf
@@ -266,10 +254,8 @@ simplescreenrecorder-qt6-git
 variety
 vlc
 vlc-plugins-all
-gearlever
+
 lm_sensors
-gtk-update-icon-cache
-gtk3
 
 #######################################################
 ###                      FONTS                      ###
@@ -290,7 +276,7 @@ ttf-ubuntu-font-family
 ###                    UTILITIES                    ###
 #######################################################
 ###themes
-kvantum
+
 kvantum-qt5
 bat
 #espeakup
@@ -298,13 +284,9 @@ fastfetch
 git
 lsd
 openbsd-netcat
-openssl
 #orca
-otf-font-awesome
 paru
-plank
 polkit
-pulseaudio-control
 ufw
 wget
 which
@@ -398,10 +380,7 @@ bibata-cursor-theme
 ###########################################################################
 kitty
 alacritty
-autokey-gtk
 autorandr
-ca-certificates
-electron31
 dash
 dmenu
 feh
@@ -439,9 +418,6 @@ ttf-font-awesome
 ttf-jetbrains-mono-nerd
 variety
 vimix-cursors
-webapp-manager
-webkit2gtk-imgpaste
-
 #######################################################
 ###                   BLACKARCH                     ###
 #######################################################
@@ -457,10 +433,6 @@ webkit2gtk-imgpaste
 chaotic-keyring
 chaotic-mirrorlist
 colloid-cursors-git
-colloid-icon-theme-git 
-colloid-gtk-theme-git
-dashbinsh
-
 #######################################################
 ###                ATHENA REPOSITORY                ###
 #######################################################
@@ -476,46 +448,23 @@ dashbinsh
 
 calamares
 calamares-debug
-#araf-calamares-config
-cryptsetup
-dmidecode
-doxygen
-gptfdisk
-hwinfo
-kconfig
-kcoreaddons
-ki18n
-kparts
-kpmcore
-kservice
-kwidgetsaddons
-libatasmart
-libplasma
-libpwquality
-polkit-qt6
-pybind11
-python
-qt6-declarative
-qt6-svg
-qt6-tools
-qt6-virtualkeyboard
-qt6-webengine
-rsync
-solid
-squashfs-tools
-udisks2
-upower
-yaml-cpp
+araf-calamares-config
+mkinitcpio-openswap
+boost
 cmake
 extra-cmake-modules
-gawk
-git
+qt5-tools
+qt5-translations
+polkit-qt5
+ckbcomp
+
+ninja
 python-jsonschema
 python-pyaml
-python-unidecode
-mkinitcpio-openswap
-trizen
-ckbcomp
+qt6-tools
+adobe-source-han-sans-jp-fonts
+adobe-source-han-sans-kr-fonts
+adobe-source-han-sans-cn-fonts
 ananicy-cpp
 cachyos-ananicy-rules-git
 
@@ -524,6 +473,4 @@ cachyos-ananicy-rules-git
 ###########################################################################
 
 araf-dots
-#araf-xfce-base
-#araf-xfce-macos
-araf-xfce-refined
+araf-xfce-base
